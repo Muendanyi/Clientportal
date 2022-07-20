@@ -1,0 +1,81 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head><!--  w  w w    .d   e   m o   2  s  . c   o m -->
+<body>
+    <table style="width:230px;padding:5px;border:1px solid #f0f0f0;font-size:14px;">
+<tr style="background-color:#f0f0f0;">
+  <th style="width:200px;text-align:left;">Elements</th>
+  <th align="center"></th>
+</tr>
+<tr style="border-bottom:1px solid #a3a3a3;">
+  <td>Sage</td>
+  <td align="center">&#10003;</td>
+  </tr>
+<tr>
+<tr>
+  <td>Similar</td>
+  <td align="center">&#10003;</td>
+  </tr>
+
+</tr>
+<tr>
+    <td>Sales</td>
+    <td align="center"><input type="checkbox" id="id_1" value="" onchange="check()"></td>
+  </tr>
+<tr>
+    <td>Inventory</td>
+    <td align="center"><input type="checkbox" id="id_2" value="" onchange="check()"></td>
+</tr>
+<tr>
+  <td>GL</td>
+  <td align="center"><input type="checkbox" id="id_3" value="" onchange="check()"></td>
+</tr>
+<tr>
+  <td>AR</td>
+  <td align="center"><input type="checkbox" id="id_4" value="" onchange="check()"></td>
+</tr>
+<tr>
+    <td>AP</td>
+    <td align="center"><input type="checkbox" id="id_5" value="" onchange="check()"></td>
+  </tr>
+<tr>
+    <td>GP</td>
+    <td align="center"><input type="checkbox" id="id_6" value="" onchange="check()"></td>
+  </tr>
+</table>
+<table style="width:220px;padding:1px;border:1px solid #f0f0f0;font-size:22px; font-weight:bold;">
+<tr style="border-bottom:1px solid #a3a3a3;text-align:center;background-color:#80CCDC">
+<td id="total"></td></tr><tr>
+</table>
+    <script type='text/javascript'>
+function check() {
+  var basic = 0;
+  var add = 0;
+  if(document.getElementById("id_1").checked) {
+   add += 1000;
+  }
+  if(document.getElementById("id_2").checked) {
+   add += 1000;
+  }
+  if(document.getElementById("id_3").checked) {
+   add += 1000;
+  }
+
+  if(document.getElementById("id_4").checked) {
+   add += 1000;
+  }
+  if(document.getElementById("id_5").checked) {
+   add += 1000;
+  }
+  if(document.getElementById("id_6").checked) {
+   add += 1000;
+  }
+  var p = basic + add;
+  var price = p ;
+  document.getElementById('total').innerHTML = price;
+ }
+check();
+  </script>
+</body>
+</html>
